@@ -1,0 +1,10 @@
+#include <pybind11/pybind11.h>
+#include <pybind11/complex.h>
+
+#include "spherical_harmonic.hpp"
+
+PYBIND11_MODULE(ace, m) {
+    m.doc() = "pybind11 example plugin"; // optional module docstring
+
+    m.def("naive_sph_harm", &naive_sph_harm, "A naive spherical harmonic.");
+}
