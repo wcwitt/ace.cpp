@@ -1,5 +1,6 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/complex.h>
+#include <pybind11/stl.h>
 
 #include "spherical_bessel.hpp"
 #include "spherical_harmonic.hpp"
