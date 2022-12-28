@@ -15,3 +15,10 @@ std::complex<double> naive_sph_harm(int l, int m, double polar, double azimuth) 
             * std::exp(std::complex<double>(0,1)*double(m)*azimuth);
     }
 }
+
+std::complex<double> naive_sph_harm_xyz(int l, int m, double x, double y, double z) {
+    double r = std::sqrt(x*x+y*y+z*z);
+    double polar = std::acos(z/r);
+    double azimuth = ((y>0)-(y<0)) * std::acos(x/std::sqrt(x*x+y*y));
+    return naive_sph_harm(l, m, polar, azimuth);
+}
