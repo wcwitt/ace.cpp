@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CXX_STANDARD_REQUIRED ON)
 
 add_library(ace
+    source/spherical_bessel.cpp
     source/spherical_harmonic.cpp
 )
 target_include_directories(ace PUBLIC source)
