@@ -32,7 +32,7 @@ std::tuple<std::vector<int>,
     for (int l=0; l<num_l; ++l) {
         for (int n=1; n<=num_n; ++n) {
             double z_nl = spherical_bessel_zeros[l][n-1];
-            if (k_max*r_max < z_nl) {
+            if (z_nl/r_max < k_max) {
                 for (int m=-l; m<=l; ++m) {
                     A_n.push_back(n);
                     A_l.push_back(l);
