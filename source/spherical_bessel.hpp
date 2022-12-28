@@ -7,4 +7,4 @@ std::tuple<std::vector<int>,
            std::vector<int>,
            std::vector<int>,
            std::vector<double>>
-    determine_basis(double r_max, double r_resolution);
+    determine_basis(double r_max, double e_max);

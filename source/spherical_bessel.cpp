@@ -19,12 +19,12 @@ std::tuple<std::vector<int>,
            std::vector<int>,
            std::vector<int>,
            std::vector<double>>
-    determine_basis(double r_max, double r_resolution) {
+    determine_basis(double r_max, double e_max) {
     // todo: manage these hardcoded values in better way
     int num_l = 10;
     int num_n = 50;
     // end todo
-    double k_max = M_PI / r_resolution;
+    double k_max = std::sqrt(2*e_max);
     std::vector<int> A_n;
     std::vector<int> A_l;
     std::vector<int> A_m;
