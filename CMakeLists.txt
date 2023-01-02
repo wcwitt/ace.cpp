@@ -7,6 +7,7 @@ set(CXX_STANDARD_REQUIRED ON)
 add_library(ace
     source/spherical_bessel.cpp
     source/spherical_harmonic.cpp
+    source/acecore/simpleprodbasis.cpp
 )
 target_include_directories(ace PUBLIC source)
 
@@ -27,4 +28,5 @@ set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib;${JlCxx_location}")
 message(STATUS "Found JlCxx at ${JlCxx_location}")
 add_library(ace-cxxwrap SHARED source/cxxwrap/ace-cxxwrap.cpp)
 target_link_libraries(ace-cxxwrap PRIVATE JlCxx::cxxwrap_julia)
+target_link_libraries(ace-cxxwrap PRIVATE JlCxx::cxxwrap_julia_stl)
 target_link_libraries(ace-cxxwrap PUBLIC ace)
