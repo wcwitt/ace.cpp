@@ -3,11 +3,17 @@ project(LibACE)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CXX_STANDARD_REQUIRED ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_BUILD_TYPE "Debug")
 
 add_library(ace
     source/spherical_bessel.cpp
     source/spherical_harmonic.cpp
+    source/partitions.cpp
     source/acecore/simpleprodbasis.cpp
+    source/acecore/sparsesymmprod.cpp
+    source/acecore/symmprod_dag.cpp
+    source/acecore/symmprod_dag_kernels.cpp
 )
 target_include_directories(ace PUBLIC source)
 
