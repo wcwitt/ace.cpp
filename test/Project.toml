@@ -1,3 +1,4 @@
 [deps]
+ACE1 = "e3f9bc04-086e-409a-ba78-e9769fe067bb"
 ACEcore = "44c1e890-45d1-48ea-94d6-c2ea5b573f71"
 CxxWrap = "1f15a43c-97ca-5a2a-ae31-89f07a497df4"

@@ -4,7 +4,8 @@ project(LibACE)
 set(CMAKE_CXX_STANDARD 17)
 set(CXX_STANDARD_REQUIRED ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Ofast -march=native -fopenmp-simd")
 
 add_library(ace
     source/spherical_bessel.cpp

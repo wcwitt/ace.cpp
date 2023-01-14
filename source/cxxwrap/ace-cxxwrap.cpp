@@ -3,6 +3,7 @@
 
 #include "acecore/simpleprodbasis.hpp"
 #include "acecore/sparsesymmprod.hpp"
+#include "acecore/symmprod_dag_kernels.hpp"
 #include "partitions.hpp"
 #include "spherical_harmonic.hpp"
 #include "spherical_bessel.hpp"
@@ -17,4 +18,9 @@ JLCXX_MODULE define_julia_module(jlcxx::Module& m)
     
     m.method("SimpleProdBasis_evaluate", &SimpleProdBasis_evaluate);
     m.method("SparseSymmProd_evaluate", &SparseSymmProd_evaluate);
+    m.method("evaluate_real_stl", &evaluate_real_stl);
+    m.method("evaluate_real", &evaluate_real);
+    m.method("evaluate_complex", &evaluate_complex);
+    m.method("evaluate_batch_real", &evaluate_batch_real);
+    m.method("evaluate_batch_complex", &evaluate_batch_complex);
 }
